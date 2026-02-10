@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="page-container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <span class="separator">›</span>
+        <span class="current">{{ page.title }}</span>
+    </nav>
+
+    <header class="tool-header {{ page.accent }}">
+        <span class="tool-icon">{{ page.icon }}</span>
+        <h1>{{ page.title }}</h1>
+        <p class="tool-description">{{ page.description }}</p>
+    </header>
+
+    <div class="tool-grid">
+        {% for feature in page.features %}
+        <a href="{{ feature.url | relative_url }}" class="tool-card {{ page.accent }}">
+            <div class="tool-card-icon">{{ feature.icon }}</div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+            <span class="tool-card-status {{ feature.status | downcase }}">
+                {% if feature.status == "stub" %}🚧 Future Development{% else %}✅ Active{% endif %}
+            </span>
+        </a>
+        {% endfor %}
+    </div>
+
+    <div class="back-link">
+        <a href="{{ '/' | relative_url }}">← Back to Home</a>
+    </div>
+</div>

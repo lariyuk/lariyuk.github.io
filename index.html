@@ -1,0 +1,34 @@
+---
+layout: default
+title: Home
+---
+{% include hero.html %}
+
+<section class="home-grid">
+    {% include tool-card.html
+    title="Road Runner"
+    icon="🏃"
+    description="Analyze popular routes, follow structured training plans, and plan your next road run with pro-level
+    insights."
+    url="/road-runner/"
+    accent="cyan"
+    %}
+
+    {% include tool-card.html
+    title="Trail Runner"
+    icon="🏔️"
+    description="Discover trails, study elevation maps, access training tools, and conquer any terrain with data-driven
+    preparation."
+    url="/trail-runner/"
+    accent="emerald"
+    %}
+
+    {% include tool-card.html
+    title="Strength Training"
+    icon="💪"
+    description="Target muscles, explore workouts by equipment, build custom routines, and visualize your progress with
+    the muscle map."
+    url="/strength-training/"
+    accent="orange"
+    %}
+</section>

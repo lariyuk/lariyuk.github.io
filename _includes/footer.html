@@ -1,0 +1,15 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="logo-icon">⚡</span>
+            <span class="logo-text">ProSport Insight</span>
+        </div>
+        <p class="footer-tagline">Pro-level analysis tools for every athlete.</p>
+        <div class="footer-links">
+            {% for item in site.navigation %}
+            <a href="{{ item.url | relative_url }}">{{ item.icon }} {{ item.title }}</a>
+            {% endfor %}
+        </div>
+        <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} ProSport Insight. All rights reserved.</p>
+    </div>
+</footer>

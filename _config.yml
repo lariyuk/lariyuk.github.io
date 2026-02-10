@@ -1,0 +1,33 @@
+title: "ProSport Insight"
+description: "Pro-level analysis and insight tools for runners and athletes"
+url: "https://lariyuk.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+
+# Navigation structure
+navigation:
+  - title: Road Runner
+    url: /road-runner/
+    icon: 🏃
+    color: cyan
+  - title: Trail Runner
+    url: /trail-runner/
+    icon: 🏔️
+    color: emerald
+  - title: Strength Training
+    url: /strength-training/
+    icon: 💪
+    color: orange
